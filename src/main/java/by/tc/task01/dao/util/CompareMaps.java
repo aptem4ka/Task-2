@@ -6,11 +6,11 @@ public class CompareMaps {
 
     public static boolean checkMaps(Map<String,String> charasteristics, Map<String,String> criterias)
     {
-        for(Map.Entry<String,String> pair:criterias.entrySet())
+        for(Map.Entry<String,String> pairCriteria:criterias.entrySet())
         {
-            if (charasteristics.containsKey(pair.getKey())) {
-                String charasteristicValue=charasteristics.get(pair.getKey());
-                if (pair.getValue().equals(charasteristicValue)); else return false;
+            if (charasteristics.containsKey(pairCriteria.getKey())) {
+                String charasteristicValue=charasteristics.get(pairCriteria.getKey());
+                if (pairCriteria.getValue().equals(charasteristicValue)); else return false;
             }
 
         }

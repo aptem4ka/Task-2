@@ -13,22 +13,15 @@ import java.util.List;
 public class ApplianceServiceImpl implements ApplianceService{
 
 	@Override
-	public <E> List<Appliance> find(Criteria<E> criteria)  {
+	public <E> List<Appliance> find(Criteria<E> criteria, String dataSource)  {
 		if (!Validator.criteriaValidator(criteria)) {
 			return null;
 		}
 		
 		DAOFactory factory = DAOFactory.getInstance();
 		ApplianceDAO applianceDAO = factory.getApplianceDAO();
-		
-		List<Appliance> appliances = applianceDAO.find(criteria);
-		
-		// you may add your own code here
-		//Вызывает поиск у DAO, обрабатывает и возвращает созданный объект (или список объектов), соответствующих поиску
 
-		//Валидатор проверяет адекватность передаваемых критериев.
-		//
-		return appliances;
+		return applianceDAO.find(criteria, dataSource);
 	}
 
 }

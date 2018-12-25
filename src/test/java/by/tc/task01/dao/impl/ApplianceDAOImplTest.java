@@ -24,7 +24,7 @@ public class ApplianceDAOImplTest {
 
         Criteria<SearchCriteria.Oven> criteria=new Criteria<>();
         criteria.add(SearchCriteria.Oven.HEIGHT,45.5);
-        List<Appliance> appliances=service.find(criteria);
+        List<Appliance> appliances=service.find(criteria, "src\\main\\resources\\appliances_db.txt");
 
         for (Appliance appliance1:appliances)
         {

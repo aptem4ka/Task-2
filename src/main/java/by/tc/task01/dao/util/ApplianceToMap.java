@@ -6,11 +6,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ApplianceToMap {
-    private Map<String,String> characteristicsMap=new HashMap<>();
-    private final Pattern PATTERN=Pattern.compile("(\\w+)=(\\w+[-]?[\\.]?\\w*)");
 
-    public Map<String,String> convert(String appliance)
+    private final static Pattern PATTERN=Pattern.compile("(\\w+)=(\\w+[-]?[\\.]?\\w*)");
+
+    public static Map<String,String> convert(String appliance)
     {
+        Map<String,String> characteristicsMap=new HashMap<>();
         Matcher matcher=PATTERN.matcher(appliance);
         while (matcher.find())
         {

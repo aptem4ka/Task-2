@@ -3,14 +3,12 @@ package by.tc.task01.main;
 import by.tc.task01.dao.util.CriteriaToString;
 import by.tc.task01.entity.Appliance;
 import by.tc.task01.entity.criteria.Criteria;
-
 import java.util.List;
-import java.util.Map;
 
 public class PrintApplianceInfo {
 	
 	public static <E> void print(List<Appliance> appliances, Criteria<E> criteria) {
-		List<String> criterias = new CriteriaToString<E>().criteriasList(criteria);
+		List<String> criterias = new CriteriaToString().criteriasList(criteria);
 
 
 		System.out.printf("Searching %s with such criterias:", criteria.getGenericClassName());

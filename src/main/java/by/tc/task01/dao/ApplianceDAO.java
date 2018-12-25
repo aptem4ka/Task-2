@@ -7,6 +7,6 @@ import java.io.IOException;
 import java.util.List;
 
 public interface ApplianceDAO {
-	<E> List<Appliance> find(Criteria<E> criteria) ;
+	<E> List<Appliance> find(Criteria<E> criteria, String dataSource) ;
 //Ищет по набору критериев и возвращает соответствующую сущность
 }

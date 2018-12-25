@@ -9,8 +9,6 @@ import java.util.Map;
 
 public class CriteriaToString<E> {
 
-
-
     public Map<String,String> criteriasMap(Criteria<E> criteria){
     Map<String,String> criteriasMap=new HashMap<>();
         for (Map.Entry<E,Object> pair:criteria.getCriteria().entrySet())

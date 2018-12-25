@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Criteria<E> {
-//Чтобы узнать тип Е, можно использовать переменную типа Класс
-	private Map<E, Object> criteria = new HashMap<E, Object>();
+
+	private final Map<E, Object> criteria = new HashMap<>();
 
 	public void add(E searchCriteria, Object value) {
 		criteria.put(searchCriteria, value);
@@ -19,11 +19,10 @@ public class Criteria<E> {
 	}
 
 	public String getGenericClassName(){
-		Map.Entry<E,Object> pair=null;
+		Map.Entry<E,Object> pair;
 		if (!criteria.isEmpty())
 		{
 			pair=criteria.entrySet().iterator().next();
-
 		return pair.getKey().getClass().getSimpleName();}
 		else return null; //КИНУТЬ ИСКЛЮЧЕНИЕ???????????????????????????????????????????
 	}
@@ -32,8 +31,4 @@ public class Criteria<E> {
 		return criteria;
 	}
 
-// you may add your own code here
-//Создаем карту, у которой ключи - это енумы, а их пара - это объект значения, будь то число или строк, по которой едт поиск
-
-	//прочие методы, такие как извлечение из критериев
 }

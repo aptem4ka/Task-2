@@ -28,8 +28,6 @@ public class SetCharachteristics {
             setTabletPC((TabletPC)appliance,characteristics);
         if (appliance instanceof Speakers)
             setSpeakers((Speakers)appliance,characteristics);
-
-
     }
 
     public static void setOven(Oven appliance, String characteristics)
@@ -47,7 +45,6 @@ public class SetCharachteristics {
             appliance.setHeight(Double.parseDouble(matcher.group(2)));
         if (matcher.find())
             appliance.setWidth(Double.parseDouble(matcher.group(2)));
-
     }
 
     public static void setLaptop(Laptop appliance, String characteristics)
@@ -82,7 +79,6 @@ public class SetCharachteristics {
             appliance.setHeight(Double.parseDouble(matcher.group(2)));
         if (matcher.find())
             appliance.setWidth(Double.parseDouble(matcher.group(2)));
-
     }
     public static void setVacuumCleaner(VacuumCleaner appliance, String characteristics)
     {
@@ -114,7 +110,6 @@ public class SetCharachteristics {
             appliance.setFlashMemory(Integer.parseInt(matcher.group(2)));
         if (matcher.find())
             appliance.setColor(matcher.group(2));
-
     }
 
     public static void setSpeakers(Speakers appliance, String characteristics)
@@ -125,7 +120,6 @@ public class SetCharachteristics {
         if (matcher.find())
             appliance.setNumberOfSpeakers(Integer.parseInt(matcher.group(2)));
         if (matcher.find())
-            //appliance.set(Double.parseDouble(matcher.group(2)));
         {
             String range=matcher.group(2);
             String delimeter="-";
