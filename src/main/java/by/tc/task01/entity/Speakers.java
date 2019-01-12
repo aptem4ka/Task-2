@@ -88,5 +88,5 @@ public class Speakers extends WiredAppliance{
                 ", cordLength=" + cordLength +
                 '}';
     }
-    // you may add your own code here
+    // you may addCriteria your own code here
 }

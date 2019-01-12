@@ -9,22 +9,23 @@ public class Criteria<E> {
 
 	private final Map<E, Object> criteria = new HashMap<>();
 
-	public void add(E searchCriteria, Object value) {
+	public void addCriteria(E searchCriteria, Object value) {
 		criteria.put(searchCriteria, value);
 	}
 
-	public Object[] getValues()
+	public Object[] criteriaValues()
 	{
 		return criteria.values().toArray();
 	}
 
-	public String getGenericClassName(){
+	public String genericClassName(){
 		Map.Entry<E,Object> pair;
 		if (!criteria.isEmpty())
 		{
 			pair=criteria.entrySet().iterator().next();
-		return pair.getKey().getClass().getSimpleName();}
-		else return null; //КИНУТЬ ИСКЛЮЧЕНИЕ???????????????????????????????????????????
+			return pair.getKey().getClass().getSimpleName();
+		}
+			else return null;
 	}
 
 	public Map<E, Object> getCriteria() {

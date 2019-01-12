@@ -76,5 +76,5 @@ public class Laptop extends PortableElectronics{
                 '}';
     }
 
-    // you may add your own code here
+    // you may addCriteria your own code here
 }

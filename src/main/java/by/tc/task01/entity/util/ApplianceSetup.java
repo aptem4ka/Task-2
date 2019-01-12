@@ -1,4 +1,4 @@
-package by.tc.task01.dao.util;
+package by.tc.task01.entity.util;
 
 import by.tc.task01.entity.*;
 
@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SetCharachteristics {
+public class ApplianceSetup {
 
     private Map<String,String> characteristicsMap=new HashMap<>();
     private static final Pattern PATTERN=Pattern.compile("(\\w+)=(\\w+[-]?[\\.]?\\w*)");
@@ -30,7 +30,7 @@ public class SetCharachteristics {
             setSpeakers((Speakers)appliance,characteristics);
     }
 
-    public static void setOven(Oven appliance, String characteristics)
+    private static void setOven(Oven appliance, String characteristics)
     {
         Matcher matcher=PATTERN.matcher(characteristics);
         if (matcher.find())
@@ -47,7 +47,7 @@ public class SetCharachteristics {
             appliance.setWidth(Double.parseDouble(matcher.group(2)));
     }
 
-    public static void setLaptop(Laptop appliance, String characteristics)
+    private static void setLaptop(Laptop appliance, String characteristics)
     {
         Matcher matcher=PATTERN.matcher(characteristics);
         if (matcher.find())
@@ -64,7 +64,7 @@ public class SetCharachteristics {
             appliance.setDisplayInches(Double.parseDouble(matcher.group(2)));
     }
 
-    public static void setRefrigerator(Refrigerator appliance, String characteristics)
+    private static void setRefrigerator(Refrigerator appliance, String characteristics)
     {
         Matcher matcher=PATTERN.matcher(characteristics);
         if (matcher.find())
@@ -80,7 +80,7 @@ public class SetCharachteristics {
         if (matcher.find())
             appliance.setWidth(Double.parseDouble(matcher.group(2)));
     }
-    public static void setVacuumCleaner(VacuumCleaner appliance, String characteristics)
+    private static void setVacuumCleaner(VacuumCleaner appliance, String characteristics)
     {
         Matcher matcher=PATTERN.matcher(characteristics);
         if (matcher.find())
@@ -97,7 +97,7 @@ public class SetCharachteristics {
             appliance.setCleaningWidth(Integer.parseInt(matcher.group(2)));
     }
 
-    public static void setTabletPC(TabletPC appliance, String characteristics)
+    private static void setTabletPC(TabletPC appliance, String characteristics)
     {
         Matcher matcher=PATTERN.matcher(characteristics);
         if (matcher.find())
@@ -112,7 +112,7 @@ public class SetCharachteristics {
             appliance.setColor(matcher.group(2));
     }
 
-    public static void setSpeakers(Speakers appliance, String characteristics)
+    private static void setSpeakers(Speakers appliance, String characteristics)
     {
         Matcher matcher=PATTERN.matcher(characteristics);
         if (matcher.find())

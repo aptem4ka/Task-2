@@ -101,5 +101,5 @@ public class VacuumCleaner extends WiredAppliance{
                 ", cleaningWidth=" + cleaningWidth +
                 '}';
     }
-    // you may add your own code here
+    // you may addCriteria your own code here
 }

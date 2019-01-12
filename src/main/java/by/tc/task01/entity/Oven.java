@@ -102,5 +102,5 @@ public class Oven extends WiredAppliance{
                 '}';
     }
 
-    // you may add your own code here
+    // you may addCriteria your own code here
 }

@@ -101,5 +101,5 @@ public class Refrigerator extends WiredAppliance{
                 ", width=" + width +
                 '}';
     }
-    // you may add your own code here
+    // you may addCriteria your own code here
 }
