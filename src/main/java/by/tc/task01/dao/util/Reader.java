@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Data {
+public class Reader {
     private final List<String> strings=new ArrayList<>();
 
     public <E> List<String> takeData(String source, Criteria<E> criteria) throws ReaderException {

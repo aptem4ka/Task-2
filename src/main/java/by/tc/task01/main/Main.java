@@ -6,13 +6,7 @@ import by.tc.task01.entity.Appliance;
 import by.tc.task01.entity.criteria.Criteria;
 import by.tc.task01.service.ApplianceService;
 import by.tc.task01.service.ServiceFactory;
-
-import java.io.File;
-import java.io.InputStream;
-import java.net.URI;
-import java.net.URL;
 import java.util.List;
-import java.util.Properties;
 
 public class Main {
 

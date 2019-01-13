@@ -1,12 +1,11 @@
 package by.tc.task01.service.validation;
 import static by.tc.task01.entity.criteria.SearchCriteria.*;
 
-import by.tc.task01.dao.util.convert.CriteriaToStringCollection;
+import by.tc.task01.dao.util.convert.CriteriaToCollection;
 
 import by.tc.task01.entity.criteria.Criteria;
 import org.junit.Test;
 
-import java.io.IOException;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,8 +33,8 @@ public class CheckNumericValueTest {
            System.out.println(matcher2.group(1)+"_____"+matcher2.group(2));
 
        }
-       CriteriaToStringCollection criteriaToStringCollection =new CriteriaToStringCollection(criteria);
-       Map<String,String> criteriasMap= criteriaToStringCollection.criteriaMap();
+       CriteriaToCollection criteriaToCollection =new CriteriaToCollection(criteria);
+       Map<String,String> criteriasMap= criteriaToCollection.criteriaMap();
         for (Map.Entry<String,String> pair:criteriasMap.entrySet())
         {
             System.out.println(pair.getKey()+"___"+pair.getValue());

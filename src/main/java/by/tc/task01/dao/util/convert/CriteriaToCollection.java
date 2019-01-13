@@ -7,11 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CriteriaToStringCollection<E> {
+public class CriteriaToCollection<E> {
 
     private final Criteria<E> criteria;
 
-    public CriteriaToStringCollection(Criteria<E> criteria) {
+    public CriteriaToCollection(Criteria<E> criteria) {
         this.criteria = criteria;
     }
 

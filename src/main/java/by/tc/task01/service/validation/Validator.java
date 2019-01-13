@@ -29,7 +29,6 @@ public class Validator {
                 }
             } else return false;
         }
-
             return true;
     }
 
