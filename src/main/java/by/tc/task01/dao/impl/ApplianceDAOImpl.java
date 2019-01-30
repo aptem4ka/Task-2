@@ -10,8 +10,8 @@ import by.tc.task01.entity.util.ApplianceSetup;
 import by.tc.task01.entity.util.ApplianceFactory;
 import by.tc.task01.entity.criteria.Criteria;
 import by.tc.task01.exception.DAOException;
-import by.tc.task01.exception.ReaderException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 		List<String> applianceLines;
 		try {
 			applianceLines = new Reader().takeData(dataSource, criteria);
-		} catch (ReaderException e) {
+		} catch (IOException e) {
 			throw new DAOException(e);
 		}
 		return searchFromLines(applianceLines, criteria);

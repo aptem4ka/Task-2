@@ -4,6 +4,7 @@ import by.tc.task01.entity.Appliance;
 import by.tc.task01.entity.criteria.Criteria;
 import by.tc.task01.entity.criteria.SearchCriteria;
 import by.tc.task01.exception.DAOException;
+import by.tc.task01.exception.ServiceException;
 import by.tc.task01.service.ApplianceService;
 import by.tc.task01.service.ServiceFactory;
 import org.junit.Test;
@@ -13,7 +14,7 @@ import java.util.List;
 public class ApplianceDAOImplTest {
 
     @Test
-    public void find() throws DAOException {
+    public void find() throws ServiceException {
         Appliance appliance;
         ServiceFactory factory = ServiceFactory.getInstance();
         ApplianceService service = factory.getApplianceService();

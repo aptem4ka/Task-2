@@ -4,13 +4,14 @@ import static by.tc.task01.entity.criteria.SearchCriteria.*;
 
 import by.tc.task01.entity.Appliance;
 import by.tc.task01.entity.criteria.Criteria;
+import by.tc.task01.exception.ServiceException;
 import by.tc.task01.service.ApplianceService;
 import by.tc.task01.service.ServiceFactory;
 import java.util.List;
 
 public class Main {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws ServiceException {
 		List<Appliance> appliance;
 		ClassLoader classLoader= new Main().getClass().getClassLoader();
 		String dataSource=classLoader.getResource("appliances_db.txt").getPath();
